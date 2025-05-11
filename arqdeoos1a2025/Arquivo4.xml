@@ -1,0 +1,31 @@
+<raiz>
+            
+    
+    <pai_1 atributo1="valor" atributo2="valor">
+                        
+        
+        <filho atributo1="valor" atributo2="valor">conteudo</filho>
+                    
+    
+    </pai_1>
+        
+    
+    <pai_2 atribute2="value" atributo1="value">
+                
+        <filho atributo1="value" atributo2="value">conteudo</filho>
+                
+        <filho atributo1="value" atributo2="value">
+                        
+            <filho atributo1="value" atributo2="value">conteudo</filho>
+                    
+        </filho>
+            
+    </pai_2>
+    
+    <pai_2 atribute2="value" atributo1="value">
+        <filho atributo1="value" atributo2="value">conteudo</filho>
+        <filho atributo1="value" atributo2="value">
+            <filho atributo1="value" atributo2="value">conteudo</filho>
+        </filho>
+    </pai_2>
+</raiz>

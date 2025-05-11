@@ -1,0 +1,6 @@
+Linha 1 do Arquivo1.txt
+
+
+Linha 4 do Arquivo1.txt
+
+
