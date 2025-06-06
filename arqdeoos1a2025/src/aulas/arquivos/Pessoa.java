@@ -12,18 +12,17 @@ public class Pessoa implements Serializable{
         setCpf(cpf);
     }
 
-     
     
-
+    
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         if(nome != null){
-            this.nome = nome;
+            this.nome = nome;    
         }else{
-            throw new RuntimeException("O nome não pode ser nulo");
+            throw new RuntimeException("O nome do não pode ser nulo");
         }
         
     }
@@ -33,21 +32,18 @@ public class Pessoa implements Serializable{
     }
 
     public void setCpf(String cpf) {
-        if( cpf != null && cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}")){
+        if(cpf!=null && cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}")){
             this.cpf = cpf;
-        }else{
-            throw new RuntimeException("CPF NULO!");
+        }
+        else{
+            throw new RuntimeException("O CPF esta invalido");
         }
         
+        
     }
-
+    
     @Override
-    public String toString() {
-        return getNome() + " (" + getCpf() + ")";
+    public String toString(){
+        return getNome() + " (" + getCpf() + " )";
     }
-    
-    
-    
-    
-    
 }

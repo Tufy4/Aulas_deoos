@@ -4,8 +4,8 @@ package revisao;
 
 public class LivroFisico extends MaterialBibliografico{
 
-    public LivroFisico(String localizacao, String titulo, String autores, int edicao, int ano, int par2) {
-        super(localizacao, titulo, autores, edicao, ano, 5);
+    public LivroFisico(String localizacao, String titulo, String autores, int edicao, int ano) {
+        super(localizacao, titulo, autores, edicao, ano,5);
     }
 
     @Override

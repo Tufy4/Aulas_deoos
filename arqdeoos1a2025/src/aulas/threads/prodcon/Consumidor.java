@@ -1,6 +1,4 @@
-
 package aulas.threads.prodcon;
-
 
 public class Consumidor implements Runnable{
     private Buffer buffer;
@@ -11,18 +9,19 @@ public class Consumidor implements Runnable{
         this.delay = delay;
     }
 
-
     @Override
-    public void run(){
-        try{
-            for(int i = 10; i <= 100; i += 10){
-                System.out.println("> " +buffer.get());
+    public void run() {
+        try {
+            for(int i = 10;i<=100;i+=10){
+                
+                System.out.println("> "+ buffer.get());
+               
                 Thread.sleep(delay);
             }
-            
-        }catch(Exception ex){
-            ex.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+    
     
 }

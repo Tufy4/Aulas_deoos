@@ -56,8 +56,6 @@ public class JogoDaVelha {
         
     }
     
-    
-    
     public void iniciar() {
         
         for(int l = 0; l < 3; l++) {
@@ -70,9 +68,6 @@ public class JogoDaVelha {
         
     }
     
-    
-    
-    
     public void jogar() throws Exception {
         
         int linha = -1, coluna = -1;
@@ -84,8 +79,8 @@ public class JogoDaVelha {
                 
                 System.out.println( toString() );
                 System.out.println("Espere sua vez.");
-
-                mensagem = (String) servidorEntrada.readObject(); // receber essa mensagem info do servidor
+                
+                mensagem = (String)servidorEntrada.readObject();
                 
                 String[] info = mensagem.split(";");
                 
@@ -121,9 +116,10 @@ public class JogoDaVelha {
             }
             
             mensagem = linha + ";" + coluna + ";" + getMarcador();
-            servidorSaida.writeObject(mensagem);// enviar essa mensagem para o servidor
+            
+            servidorSaida.writeObject(mensagem);
             setSuaVez(false);
-                        
+            
             checarTermino();
             
         }

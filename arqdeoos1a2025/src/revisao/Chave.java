@@ -1,82 +1,70 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package revisao;
 
 
-public class Chave implements Emprestavel {
-    public String armario;
-    public boolean Emprestado;
+public class Chave implements Emprestavel{
+    
 
-    public Chave(String armario){
-        this.armario = armario;
+    public Chave(String armario) {
+        setArmario(armario);
         setEmprestado(false);
-        
+      
     }
+    
+    
+    public String armario;
+    public boolean emprestado; 
+
+    public String getArmario() {
+        return armario;
+    }
+    
 
     public void setArmario(String armario) {
         if(armario.charAt(0)=='A'){
             this.armario = armario;
         }
         
+        
     }
 
     public boolean isEmprestado() {
-        return Emprestado;
+        return emprestado;
     }
 
-    public void setEmprestado(boolean Emprestado) {
-        this.Emprestado = Emprestado;
+    public void setEmprestado(boolean emprestado) {
+        this.emprestado = emprestado;
     }
-    
-    
-    public String getArmario() {
-        return armario;
-    }
-
-    
 
     @Override
     public String getNomeObjeto() {
         return getArmario();
     }
 
-    
-    
-    
-    
     @Override
     public boolean podeEmprestar() {
-        if(Emprestado == false){
+        if(emprestado==false){
             return true;
-        }else{
+        }
+        else{
             return false;
         }
     }
 
-    
-    
-    
-    
-    
     @Override
     public boolean emprestar() {
         if(podeEmprestar()){
             setEmprestado(true);
             return true;
-        }else{
+        }
+        else{
             return false;
         }
     }
-    
-    
-    
-    
 
     @Override
     public boolean devolver() {
-        if(Emprestado = true){
+        if(emprestado==true){
             setEmprestado(false);
             return true;
         }else{
@@ -85,6 +73,5 @@ public class Chave implements Emprestavel {
     }
     
     
-   
     
 }

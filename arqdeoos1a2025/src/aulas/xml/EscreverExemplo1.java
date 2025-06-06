@@ -17,7 +17,7 @@ public class EscreverExemplo1 {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
         Document doc = docBuilder.newDocument();
-        
+            
         // raiz
         Element raiz = doc.createElement( "raiz" );
         doc.appendChild(raiz);

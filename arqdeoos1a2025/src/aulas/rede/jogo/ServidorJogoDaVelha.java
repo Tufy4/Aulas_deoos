@@ -29,13 +29,15 @@ public class ServidorJogoDaVelha {
         
         
         
+        
+        
         Socket jogadorO;        
-        System.out.println( "Esperando por Conexão (Jogador X)." );
+        System.out.println( "Esperando por Conexão (Jogador O)." );
         jogadorO =  servidor.accept();
         System.out.println( "Conexão Recebida: " + jogadorO.toString() + ":" + jogadorO.getPort() + "\n" );
         
         ObjectOutputStream entradaJogadorO;
-        entradaJogadorO= new ObjectOutputStream( jogadorO.getOutputStream() );
+        entradaJogadorO = new ObjectOutputStream( jogadorO.getOutputStream() );
         entradaJogadorO.flush();        
         entradaJogadorO.writeObject("O;false");
         
@@ -43,13 +45,12 @@ public class ServidorJogoDaVelha {
         saidaJogadorO = new ObjectInputStream( jogadorO.getInputStream() );
         
         
-        Thread thread1 = new Thread( new GerenciadorDeJogadas(saidaJogadorX, entradaJogadorO));
         
-        Thread thread2 = new Thread( new GerenciadorDeJogadas(saidaJogadorO, entradaJogadorX));
+        Thread thread1 = new Thread(new GerenciadorDeJogadas(saidaJogadorX, entradaJogadorO));
+        Thread thread2 = new Thread(new GerenciadorDeJogadas(saidaJogadorO, entradaJogadorX));
         
         thread1.start();
         thread2.start();
-        
         
                         
     }
